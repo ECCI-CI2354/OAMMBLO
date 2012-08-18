@@ -2,5 +2,8 @@
 <resources>
 
     <string name="app_name">OAMMBLO</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_login_">Login_Activity</string>
 
 </resources>
