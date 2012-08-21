@@ -7,5 +7,8 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_time_line">TimeLineActivity</string>
     <string name="nuevoTitulo">Proximamente tweets</string>
+    <string name="UserName">User Name: </string>
+    <string name="Password">Password: </string>
+    <string name="Login">-Login-</string>
 
 </resources>
