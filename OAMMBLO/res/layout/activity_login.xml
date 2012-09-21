@@ -5,26 +5,17 @@
 
     <EditText
         android:id="@+id/login_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="173dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="@string/login_username_hint" >
+        style="@style/LoginInputText"
+        android:hint="@string/login_username_hint"
+        android:inputType="textEmailAddress" >
 
         <requestFocus />
     </EditText>
 
     <EditText
         android:id="@+id/login_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/LoginInputText"
         android:layout_below="@+id/login_username"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:ems="10"
         android:hint="@string/login_password_hint"
         android:inputType="textPassword" />
 

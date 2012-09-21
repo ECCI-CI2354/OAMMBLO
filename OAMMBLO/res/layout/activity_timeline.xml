@@ -41,15 +41,22 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:text="Button" />
+                android:onClick="loadData"
+                android:text="Load" />
 
             <Button
                 android:id="@+id/button1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:text="Button" />
+                android:onClick="clearData"
+                android:text="Clear" />
         </LinearLayout>
     </RelativeLayout>
-
+	<TextView android:id="@+id/timeline_empty"
+	    android:layout_height="wrap_content"
+	    android:layout_width="fill_parent"
+	    android:text="No results"
+	    android:background="#FF0000"
+	    />
 </FrameLayout>

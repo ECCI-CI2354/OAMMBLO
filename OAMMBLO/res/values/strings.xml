@@ -5,10 +5,17 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_login">LoginActivity</string>
-
     <string name="login_username_hint">Type your username</string>
     <string name="login_password_hint">Password</string>
     <string name="login_button">Login</string>
-    
     <string name="timeline_title">Timeline</string>
+
+    <string-array name="options">
+        <item>Opcion uno</item>
+        <item>Opcion dos</item>
+        <item>Opcion tres</item>
+        <item>Opcion cuatro</item>
+        <item>Opcion cinco</item>
+    </string-array>
+
 </resources>

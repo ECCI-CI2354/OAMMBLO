@@ -5,8 +5,8 @@
     android:orientation="horizontal" >
 
     <FrameLayout
-        android:layout_width="75dp"
-        android:layout_height="75dp" >
+        android:layout_width="@dimen/tweet_thumbnail_size"
+        android:layout_height="@dimen/tweet_thumbnail_size" >
 
         <ImageView
             android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:lines="1"
             android:text="Small Text"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#ffffff" />
+            android:textColor="@color/tweet_author" />
     </FrameLayout>
 
     <RelativeLayout
@@ -39,6 +39,8 @@
             android:layout_alignParentTop="true"
             android:text="Medium Text"
             android:gravity="left"
+            android:textColor="@color/tweet_content"
+            android:textSize="@dimen/tweet_content_font_size"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
