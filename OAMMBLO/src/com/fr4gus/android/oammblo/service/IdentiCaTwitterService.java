@@ -1,6 +1,10 @@
 package com.fr4gus.android.oammblo.service;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.apache.http.HttpEntity;
@@ -12,12 +16,16 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 import com.fr4gus.android.oammblo.bo.Tweet;
+import com.fr4gus.android.oammblo.util.HTTPClientFactory;
 import com.fr4gus.android.oammblo.util.LogIt;
+import com.fr4gus.android.oammblo.util.HTTPClientFactory.ClientType;
+import com.google.gson.Gson;
 
 public class IdentiCaTwitterService extends TwitterService {
 
 	private static final String API_BASE_URL = "https://identi.ca/api";
 	private static final String AUTH = "/account/verify_credentials.json";
+	private static final String PUBLIC_TIMELINE = "/statuses/public_timeline.json";
 
 	@Override
 	public boolean authenticate(String username, String password)
@@ -62,7 +70,24 @@ public class IdentiCaTwitterService extends TwitterService {
 
 	@Override
 	public List<Tweet> getTimeline() {
-		// TODO Auto-generated method stub
+		String path = API_BASE_URL + PUBLIC_TIMELINE;
+		try {
+			InputStream in = HTTPClientFactory.getInputStream(path,
+					ClientType.HTTP_URL_CONNECTION);
+
+			Gson gson = new Gson();
+
+			Tweet[] tweets = gson.fromJson(new InputStreamReader(in),
+					Tweet[].class);
+
+			return Arrays.asList(tweets);
+
+		} catch (ClientProtocolException e) {
+			LogIt.e(this, e, e.getMessage());
+		} catch (IOException e) {
+			LogIt.e(this, e, e.getMessage());
+		}
+
 		return null;
 	}
 

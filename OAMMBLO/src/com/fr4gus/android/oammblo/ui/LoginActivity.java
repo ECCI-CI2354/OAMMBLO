@@ -8,16 +8,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.fr4gus.android.oammblo.OammbloApp;
 import com.fr4gus.android.oammblo.R;
 import com.fr4gus.android.oammblo.service.TwitterService;
 import com.fr4gus.android.oammblo.service.TwitterServiceException;
-import com.fr4gus.android.oammblo.service.TwitterServiceFactory;
 
 public class LoginActivity extends Activity {
 	public static final int DIALOG_MULTIPLE_CHOICE = 0;
 	EditText mUsername;
 	EditText mPassword;
-	TwitterService mService = TwitterServiceFactory.getService();
+	TwitterService mService = OammbloApp.getInstance().getService();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

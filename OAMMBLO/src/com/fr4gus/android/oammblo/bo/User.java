@@ -1,29 +1,44 @@
 package com.fr4gus.android.oammblo.bo;
 
+import com.google.gson.annotations.SerializedName;
+
 public class User {
-	private String id;
-	private String displayName;
+    public static final String TABLE_NAME = "user";
 
-	public User(String id, String displayName) {
-		super();
-		this.id = id;
-		this.displayName = displayName;
-	}
+    public static final String[] COLUMNS = new String[] { Columns.ID, Columns.DISPLAY_NAME };
 
-	public String getId() {
-		return id;
-	}
+    public static interface Columns {
+        String ID = "_id";
 
-	public void setId(String id) {
-		this.id = id;
-	}
+        String DISPLAY_NAME = "display_name";
 
-	public String getDisplayName() {
-		return displayName;
-	}
+    }
 
-	public void setDisplayName(String displayName) {
-		this.displayName = displayName;
-	}
+    private long id;
+
+    @SerializedName("screen_name")
+    private String displayName;
+
+    public User(long id, String displayName) {
+        super();
+        this.id = id;
+        this.displayName = displayName;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
 
 }

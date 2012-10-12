@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.fr4gus.android.oammblo.OammbloApp;
 import com.fr4gus.android.oammblo.R;
 import com.fr4gus.android.oammblo.bo.Tweet;
 import com.fr4gus.android.oammblo.service.TwitterService;
@@ -65,7 +66,7 @@ public class TimelineActivity extends Activity {
 
 			@Override
 			protected List<Tweet> doInBackground(Void... params) {
-				TwitterService service = TwitterServiceFactory.getService();
+				TwitterService service = OammbloApp.getInstance().getService();
 				List<Tweet> tweets = null;
 				try {
 					tweets = service.getTimeline();

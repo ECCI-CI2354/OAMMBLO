@@ -27,29 +27,29 @@ public class InMemoryTwitterService extends TwitterService {
 	public List<Tweet> getTimeline() {
 		simulateBlock();
 		List<Tweet> tweets = new ArrayList<Tweet>();
-		tweets.add(new Tweet(new User("001", "John Doe"), "Hacia la casa",
+		tweets.add(new Tweet(new User(1, "John Doe"), "Hacia la casa",
 				new Date()));
-		tweets.add(new Tweet(new User("001", "John Doe"), "Hay presa :(",
+		tweets.add(new Tweet(new User(2, "John Doe"), "Hay presa :(",
 				new Date()));
-		tweets.add(new Tweet(new User("002", "Mary Doe"), "@jdoe :'(",
+		tweets.add(new Tweet(new User(3, "Mary Doe"), "@jdoe :'(",
 				new Date(), true));
-		tweets.add(new Tweet(new User("003", "Juan P"), "Mi gato se escapo",
+		tweets.add(new Tweet(new User(4, "Juan P"), "Mi gato se escapo",
 				new Date()));
-		tweets.add(new Tweet(new User("003", "Juan P"), "Mi gato se escapo",
+		tweets.add(new Tweet(new User(3, "Juan P"), "Mi gato se escapo",
 				new Date()));
-		tweets.add(new Tweet(new User("003", "Juan P"), "Mi gato se escapo",
+		tweets.add(new Tweet(new User(3, "Juan P"), "Mi gato se escapo",
 				new Date()));
-		tweets.add(new Tweet(new User("003", "Juan P"), "Mi gato se escapo",
+		tweets.add(new Tweet(new User(3, "Juan P"), "Mi gato se escapo",
 				new Date()));
-		tweets.add(new Tweet(new User("003", "Juan P"), "Mi gato se escapo",
+		tweets.add(new Tweet(new User(3, "Juan P"), "Mi gato se escapo",
 				new Date()));
-		tweets.add(new Tweet(new User("003", "Juan P"), "Mi gato se escapo",
+		tweets.add(new Tweet(new User(3, "Juan P"), "Mi gato se escapo",
 				new Date()));
-		tweets.add(new Tweet(new User("003", "Juan P"), "Mi gato se escapo",
+		tweets.add(new Tweet(new User(3, "Juan P"), "Mi gato se escapo",
 				new Date()));
-		tweets.add(new Tweet(new User("003", "Juan P"), "Who?", new Date()));
-		tweets.add(new Tweet(new User("003", "Juan P"), "What?", new Date()));
-		tweets.add(new Tweet(new User("003", "Juan P"), "Lorem Ipsum",
+		tweets.add(new Tweet(new User(3, "Juan P"), "Who?", new Date()));
+		tweets.add(new Tweet(new User(3, "Juan P"), "What?", new Date()));
+		tweets.add(new Tweet(new User(3, "Juan P"), "Lorem Ipsum",
 				new Date()));
 		return tweets;
 	}
